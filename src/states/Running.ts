@@ -25,16 +25,18 @@ namespace Darkworld.States {
 
             this.player = this.game.dWorld.addPlayer(true);
 
-            let torch = new Darkworld.Entities.Items.Torch(this.game, 200, 200);
+            // let torch = new Darkworld.Entities.Items.Torch(this.game, 200, 200);
 
-            let torch1 = new Darkworld.Entities.Items.Torch(this.game,500,450);
+            // let torch1 = new Darkworld.Entities.Items.Torch(this.game,500,450);
 
-
+            //this.player = new Darkworld.Entities.Mobiles.Humanoids.Player(this.game, 10, 20);
         }
 
         update() {
-            this.game.dWorld.update();
-            this.game.dWorld.debugRender();
+            if (this.game.dWorld) {
+                this.game.dWorld.update();
+                this.game.dWorld.debugRender();
+            }
         }
 
         render() {
